@@ -40,7 +40,7 @@ function App() {
 
   return(
     <div className='App'>
-      <button >Hide List</button>
+      <button >Hide Make</button>
       {BlogCards}
     </div>
   )
