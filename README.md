@@ -1,0 +1,2 @@
+# rproduct
+Product Detail Page
