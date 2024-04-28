@@ -1,25 +1,49 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import BlogCard from './BlogCards';
 
 function App() {
+ /* const blogObj = {
+    title:'New blog 1',
+    description:'Content descirpo'
+  }*/
+
+  const BlogArr =[
+    {
+      id:1,
+      team:'Chelsea',
+      position:'11',
+    },
+    {
+      id:2,
+      team:'Bayern Munich',
+      position:12
+    },
+
+    {
+      id:3,
+      team:'Napoli',
+      position:14
+    },
+
+
+    
+  ]
+   
+  const BlogCards = BlogArr.map((item,pos)=>{
+    console.log(item)
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <BlogCard key={pos} team={item.team} position={item.position} id={item.id}/>
+  )
+})
+
+  return(
+    <div className='App'>
+      <button >Hide List</button>
+      {BlogCards}
     </div>
-  );
+  )
 }
 
 export default App;
